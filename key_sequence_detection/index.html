@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Key Detection</title>
+    <div class="demo">
+        <label>type secret world "wesbos"</label>
+        <input type="text">
+    </div>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+    <script>
+    showRainBows = (e) => {
+        pressed.push(e.key);
+        pressed.splice(-secretWorld.length - 1, pressed.length - secretWorld.length);
+        pressed.join('').includes(secretWorld) ? cornify_add() : console.log('nop')
+        console.log(pressed);
+    };
+    const pressed = [];
+    const secretWorld = "wesbos";
+    window.addEventListener('keydown', showRainBows);
+    </script>
+</body>
+
+</html>
